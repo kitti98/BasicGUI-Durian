@@ -52,7 +52,7 @@ def sumdata():
 #########################################
 GUI = Tk()
 GUI.geometry('700x850')
-GUI.title('My Program')
+GUI.title('Durian v.0.0.1')
 
 file = PhotoImage(file='durian.png')
 IMG = Label(GUI,image=file)
@@ -61,7 +61,7 @@ IMG.pack(pady=20)
 L1 = Label(GUI,text='โปรแกรมคำนวณทุเรียน',font=('Angsana New',30,'bold'),fg='green')
 L1.pack() # .place(x,y) , .grid(row=0,column=0)
 
-L2 = Label(GUI,text='กรุณากรอกจำนวนทุเรียน',font=('Angsana New',20))
+L2 = Label(GUI,text='กรุณากรอกจำนวนทุเรียน (กิโลกรัม)',font=('Angsana New',20))
 L2.pack() # .place(x,y) , .grid(row=0,column=0)
 
 v_quantity = StringVar() #ตำแหน่งตัวแปรที่ใช้เก็บข้อมูลของช่องกรอก
@@ -74,10 +74,10 @@ def Cal(event=None):
 	price = 100
 	print('จำนวน', float(quantity) * price)
 	Total = float(quantity) * price
-	# # EN DATE
+	
 	# # stamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-	# # THAI DATE
+	
 	# stamp = datetime.now()
 	# stamp = stamp.replace(year=stamp.year+543) # บวกเป็น พ.ศ.
 	# stamp = stamp.strftime('%Y-%m-%d %H:%M:%S')
@@ -111,6 +111,7 @@ def SummaryData(event):
 	messagebox.showinfo(title,text)
 
 GUI.bind('<F1>',SummaryData)
+GUI.bind('<F2>',SummaryData)
 
 E1.focus() # ให้ cursor ไปยังตำแหน่งของ E1
 GUI.mainloop()
