@@ -1,2 +1,2 @@
 # BasicGUI-Durian
-โปรแกรมคำนวณราคาทุเรียน เขียนด้วย Python
+Durian price calculator using Python
